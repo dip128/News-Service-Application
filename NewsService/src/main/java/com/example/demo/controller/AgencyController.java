@@ -32,7 +32,7 @@ public class AgencyController {
 		return list;
 	}
 	
-	@PostMapping("/news/agency/add/{name}")
+	@PostMapping("/news/add/agency/{name}")
 	public Agency addAgency(@PathVariable String name,@RequestParam("logo") String logo) {
 		
 		Agency agency = new Agency();

@@ -34,7 +34,7 @@ public class NewsFeedController {
 	@Autowired
 	private AgencyRepository agencyrepo;
 
-	@PostMapping("/post/news")
+	@PostMapping("news/add/post/")
 	public NewsEntity getNewsAll(@RequestParam("catagory_id") long cat_id,@RequestParam("agency_id") long agency_id,@RequestParam("news_date") Date news_date,
 							@RequestParam("news_desc") String news_desc,@RequestParam("news_title") String news_title,@RequestParam("news_link") String news_link) throws WrongInputCombination {
 		
@@ -55,7 +55,7 @@ public class NewsFeedController {
 		
 	}
 	
-	@PutMapping("update/click/count")
+	@PutMapping("news/add/update/click/count")
 	public void updateClick(@RequestParam("news_id") long news_id,@RequestParam("click_count") int click_count) throws WrongInputCombination {
 		
 		Optional.ofNullable(newsRepo.findById(news_id).orElseThrow(WrongInputCombination::new));
@@ -63,7 +63,7 @@ public class NewsFeedController {
 		
 	}
 	
-	@DeleteMapping("delete/news/all")
+	@DeleteMapping("news/delete/all")
 	public void deleteAllNews() {
 		newsRepo.deleteAll();
 	}
