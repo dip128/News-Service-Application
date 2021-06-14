@@ -22,8 +22,8 @@ jobs:
       uses: AkhileshNS/heroku-deploy@v3.12.12
       with:
         # This will be used for authentication. You can find it in your heroku homepage account settings
-        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        heroku_api_key: de3c14e6-2bb3-467f-b9dc-d9926bbea332
         # Email that you use with heroku
-        heroku_email: ${{secrets.HEROKU_EMAIL}}
+        heroku_email: diptom326saha@gmail.com
         # The appname to use for deploying/updating
         heroku_app_name: newsservices
